@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF8FD9FF21417E8800CFFAFF /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41ECB2141783000551CE7 /* Record.swift */; };
 		EFF41E7F213BC80000551CE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41E7E213BC80000551CE7 /* AppDelegate.swift */; };
 		EFF41E81213BC80000551CE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41E80213BC80000551CE7 /* ViewController.swift */; };
 		EFF41E84213BC80000551CE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF41E82213BC80000551CE7 /* Main.storyboard */; };
@@ -14,6 +15,17 @@
 		EFF41E89213BC80200551CE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF41E87213BC80200551CE7 /* LaunchScreen.storyboard */; };
 		EFF41E94213BC80200551CE7 /* ScorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41E93213BC80200551CE7 /* ScorerTests.swift */; };
 		EFF41E9F213BC80200551CE7 /* ScorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41E9E213BC80200551CE7 /* ScorerUITests.swift */; };
+		EFF41EB3213BC85900551CE7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF41EB2213BC85900551CE7 /* NotificationCenter.framework */; };
+		EFF41EB6213BC85900551CE7 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41EB5213BC85900551CE7 /* TodayViewController.swift */; };
+		EFF41EB9213BC85900551CE7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF41EB7213BC85900551CE7 /* MainInterface.storyboard */; };
+		EFF41EBD213BC85900551CE7 /* ScorerWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EFF41EB0213BC85900551CE7 /* ScorerWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EFF41EC3213BD55100551CE7 /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41EC2213BD55100551CE7 /* Spending.swift */; };
+		EFF41EC4213BD79100551CE7 /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41EC2213BD55100551CE7 /* Spending.swift */; };
+		EFF41EC6213BE39000551CE7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41EC5213BE39000551CE7 /* Category.swift */; };
+		EFF41EC7213BE95100551CE7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41EC5213BE39000551CE7 /* Category.swift */; };
+		EFF41EC9213BF06E00551CE7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41EC8213BF06E00551CE7 /* Extensions.swift */; };
+		EFF41ECA213BF4CD00551CE7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41EC8213BF06E00551CE7 /* Extensions.swift */; };
+		EFF41ECC2141783000551CE7 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF41ECB2141783000551CE7 /* Record.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +43,28 @@
 			remoteGlobalIDString = EFF41E7A213BC80000551CE7;
 			remoteInfo = Scorer;
 		};
+		EFF41EBB213BC85900551CE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFF41E73213BC80000551CE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFF41EAF213BC85900551CE7;
+			remoteInfo = ScorerWidget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EFF41EC1213BC85900551CE7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EFF41EBD213BC85900551CE7 /* ScorerWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EFF41E7B213BC80000551CE7 /* Scorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +80,15 @@
 		EFF41E9A213BC80200551CE7 /* ScorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF41E9E213BC80200551CE7 /* ScorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerUITests.swift; sourceTree = "<group>"; };
 		EFF41EA0213BC80200551CE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFF41EB0213BC85900551CE7 /* ScorerWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScorerWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFF41EB2213BC85900551CE7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		EFF41EB5213BC85900551CE7 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		EFF41EB8213BC85900551CE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		EFF41EBA213BC85900551CE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFF41EC2213BD55100551CE7 /* Spending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
+		EFF41EC5213BE39000551CE7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EFF41EC8213BF06E00551CE7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EFF41ECB2141783000551CE7 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +113,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFF41EAD213BC85900551CE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFF41EB3213BC85900551CE7 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +130,8 @@
 				EFF41E7D213BC80000551CE7 /* Scorer */,
 				EFF41E92213BC80200551CE7 /* ScorerTests */,
 				EFF41E9D213BC80200551CE7 /* ScorerUITests */,
+				EFF41EB4213BC85900551CE7 /* ScorerWidget */,
+				EFF41EB1213BC85900551CE7 /* Frameworks */,
 				EFF41E7C213BC80000551CE7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +142,7 @@
 				EFF41E7B213BC80000551CE7 /* Scorer.app */,
 				EFF41E8F213BC80200551CE7 /* ScorerTests.xctest */,
 				EFF41E9A213BC80200551CE7 /* ScorerUITests.xctest */,
+				EFF41EB0213BC85900551CE7 /* ScorerWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +152,10 @@
 			children = (
 				EFF41E7E213BC80000551CE7 /* AppDelegate.swift */,
 				EFF41E80213BC80000551CE7 /* ViewController.swift */,
+				EFF41ECB2141783000551CE7 /* Record.swift */,
+				EFF41EC2213BD55100551CE7 /* Spending.swift */,
+				EFF41EC5213BE39000551CE7 /* Category.swift */,
+				EFF41EC8213BF06E00551CE7 /* Extensions.swift */,
 				EFF41E82213BC80000551CE7 /* Main.storyboard */,
 				EFF41E85213BC80200551CE7 /* Assets.xcassets */,
 				EFF41E87213BC80200551CE7 /* LaunchScreen.storyboard */,
@@ -125,6 +182,24 @@
 			path = ScorerUITests;
 			sourceTree = "<group>";
 		};
+		EFF41EB1213BC85900551CE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFF41EB2213BC85900551CE7 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFF41EB4213BC85900551CE7 /* ScorerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				EFF41EB5213BC85900551CE7 /* TodayViewController.swift */,
+				EFF41EB7213BC85900551CE7 /* MainInterface.storyboard */,
+				EFF41EBA213BC85900551CE7 /* Info.plist */,
+			);
+			path = ScorerWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +210,12 @@
 				EFF41E77213BC80000551CE7 /* Sources */,
 				EFF41E78213BC80000551CE7 /* Frameworks */,
 				EFF41E79213BC80000551CE7 /* Resources */,
+				EFF41EC1213BC85900551CE7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EFF41EBC213BC85900551CE7 /* PBXTargetDependency */,
 			);
 			name = Scorer;
 			productName = Scorer;
@@ -181,6 +258,23 @@
 			productReference = EFF41E9A213BC80200551CE7 /* ScorerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		EFF41EAF213BC85900551CE7 /* ScorerWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFF41EBE213BC85900551CE7 /* Build configuration list for PBXNativeTarget "ScorerWidget" */;
+			buildPhases = (
+				EFF41EAC213BC85900551CE7 /* Sources */,
+				EFF41EAD213BC85900551CE7 /* Frameworks */,
+				EFF41EAE213BC85900551CE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScorerWidget;
+			productName = ScorerWidget;
+			productReference = EFF41EB0213BC85900551CE7 /* ScorerWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +296,9 @@
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = EFF41E7A213BC80000551CE7;
 					};
+					EFF41EAF213BC85900551CE7 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
 			buildConfigurationList = EFF41E76213BC80000551CE7 /* Build configuration list for PBXProject "Scorer" */;
@@ -220,6 +317,7 @@
 				EFF41E7A213BC80000551CE7 /* Scorer */,
 				EFF41E8E213BC80200551CE7 /* ScorerTests */,
 				EFF41E99213BC80200551CE7 /* ScorerUITests */,
+				EFF41EAF213BC85900551CE7 /* ScorerWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +347,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFF41EAE213BC85900551CE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFF41EB9213BC85900551CE7 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -256,8 +362,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF41EC9213BF06E00551CE7 /* Extensions.swift in Sources */,
+				EFF41EC3213BD55100551CE7 /* Spending.swift in Sources */,
+				EFF41ECC2141783000551CE7 /* Record.swift in Sources */,
 				EFF41E81213BC80000551CE7 /* ViewController.swift in Sources */,
 				EFF41E7F213BC80000551CE7 /* AppDelegate.swift in Sources */,
+				EFF41EC6213BE39000551CE7 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +387,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFF41EAC213BC85900551CE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFF41EB6213BC85900551CE7 /* TodayViewController.swift in Sources */,
+				EFF41EC4213BD79100551CE7 /* Spending.swift in Sources */,
+				EF8FD9FF21417E8800CFFAFF /* Record.swift in Sources */,
+				EFF41EC7213BE95100551CE7 /* Category.swift in Sources */,
+				EFF41ECA213BF4CD00551CE7 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +411,11 @@
 			isa = PBXTargetDependency;
 			target = EFF41E7A213BC80000551CE7 /* Scorer */;
 			targetProxy = EFF41E9B213BC80200551CE7 /* PBXContainerItemProxy */;
+		};
+		EFF41EBC213BC85900551CE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFF41EAF213BC85900551CE7 /* ScorerWidget */;
+			targetProxy = EFF41EBB213BC85900551CE7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -307,6 +434,14 @@
 				EFF41E88213BC80200551CE7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EFF41EB7213BC85900551CE7 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFF41EB8213BC85900551CE7 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -429,6 +564,7 @@
 		EFF41EA4213BC80200551CE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Scorer/Info.plist;
@@ -446,6 +582,7 @@
 		EFF41EA5213BC80200551CE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Scorer/Info.plist;
@@ -538,6 +675,42 @@
 			};
 			name = Release;
 		};
+		EFF41EBF213BC85900551CE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScorerWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = debussynetwork.com.Scorer.ScorerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFF41EC0213BC85900551CE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScorerWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = debussynetwork.com.Scorer.ScorerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,6 +746,15 @@
 			buildConfigurations = (
 				EFF41EAA213BC80200551CE7 /* Debug */,
 				EFF41EAB213BC80200551CE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFF41EBE213BC85900551CE7 /* Build configuration list for PBXNativeTarget "ScorerWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFF41EBF213BC85900551CE7 /* Debug */,
+				EFF41EC0213BC85900551CE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
