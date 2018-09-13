@@ -21,6 +21,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSd-uz-c9P">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                 <subviews>
+                                    <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7C-HC-bQC">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-YL-RvV">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wW-v0-UKC">
                                         <rect key="frame" x="0.0" y="0.0" width="106.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -120,20 +128,28 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Qia-YL-RvV" firstAttribute="leading" secondItem="eSd-uz-c9P" secondAttribute="leading" id="07K-RK-xeA"/>
+                                    <constraint firstItem="X7C-HC-bQC" firstAttribute="leading" secondItem="eSd-uz-c9P" secondAttribute="leading" id="3Gu-7C-P2o"/>
+                                    <constraint firstItem="Qia-YL-RvV" firstAttribute="top" secondItem="eSd-uz-c9P" secondAttribute="top" id="3Mr-yc-c7y"/>
                                     <constraint firstAttribute="bottom" secondItem="p4m-br-hrb" secondAttribute="bottom" id="6S4-mn-t2E"/>
                                     <constraint firstItem="BKz-Ny-iwe" firstAttribute="leading" secondItem="p4m-br-hrb" secondAttribute="trailing" id="9ST-cF-P5H"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qia-YL-RvV" secondAttribute="trailing" id="9zb-iV-rnW"/>
                                     <constraint firstAttribute="bottom" secondItem="BKz-Ny-iwe" secondAttribute="bottom" id="AbG-6C-iZ5"/>
                                     <constraint firstItem="w11-gP-QEz" firstAttribute="leading" secondItem="5wW-v0-UKC" secondAttribute="trailing" id="FhV-nc-ruY"/>
                                     <constraint firstItem="5wW-v0-UKC" firstAttribute="width" secondItem="p4m-br-hrb" secondAttribute="width" id="G6D-NS-oTl"/>
                                     <constraint firstAttribute="bottom" secondItem="5wW-v0-UKC" secondAttribute="bottom" id="GCW-4q-vsU"/>
                                     <constraint firstItem="5wW-v0-UKC" firstAttribute="leading" secondItem="eSd-uz-c9P" secondAttribute="leading" id="LkN-SU-Ihf"/>
                                     <constraint firstItem="w11-gP-QEz" firstAttribute="width" secondItem="5wW-v0-UKC" secondAttribute="width" id="M4n-St-T6b"/>
+                                    <constraint firstAttribute="bottom" secondItem="X7C-HC-bQC" secondAttribute="bottom" id="NCd-cw-H12"/>
+                                    <constraint firstAttribute="trailing" secondItem="X7C-HC-bQC" secondAttribute="trailing" id="RZp-3C-31N"/>
                                     <constraint firstItem="p4m-br-hrb" firstAttribute="leading" secondItem="5wW-v0-UKC" secondAttribute="trailing" id="SI8-3z-y5k"/>
+                                    <constraint firstItem="X7C-HC-bQC" firstAttribute="top" secondItem="eSd-uz-c9P" secondAttribute="top" id="W1m-fJ-76M"/>
                                     <constraint firstItem="p4m-br-hrb" firstAttribute="width" secondItem="BKz-Ny-iwe" secondAttribute="width" id="X4s-pS-A36"/>
                                     <constraint firstItem="w11-gP-QEz" firstAttribute="top" secondItem="eSd-uz-c9P" secondAttribute="top" id="XXl-3m-SRU"/>
                                     <constraint firstItem="BKz-Ny-iwe" firstAttribute="leading" secondItem="p4m-br-hrb" secondAttribute="trailing" id="YpB-9i-xko"/>
                                     <constraint firstItem="p4m-br-hrb" firstAttribute="top" secondItem="eSd-uz-c9P" secondAttribute="top" id="dm6-Rd-7Eo"/>
                                     <constraint firstItem="5wW-v0-UKC" firstAttribute="top" secondItem="eSd-uz-c9P" secondAttribute="top" id="erG-NV-5S2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qia-YL-RvV" secondAttribute="bottom" id="heU-5M-q7f"/>
                                     <constraint firstItem="BKz-Ny-iwe" firstAttribute="top" secondItem="eSd-uz-c9P" secondAttribute="top" id="lLF-qr-WZ0"/>
                                     <constraint firstItem="p4m-br-hrb" firstAttribute="leading" secondItem="5wW-v0-UKC" secondAttribute="trailing" id="lxh-AU-4z8"/>
                                     <constraint firstAttribute="bottom" secondItem="w11-gP-QEz" secondAttribute="bottom" id="rrf-JZ-fPw"/>
@@ -154,13 +170,16 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="60"/>
                     <connections>
+                        <outlet property="blackMask" destination="X7C-HC-bQC" id="oFz-3i-jPM"/>
                         <outlet property="categoryLabel" destination="irK-Bh-9hx" id="GLX-ZB-JoR"/>
                         <outlet property="scoreLabel" destination="WyJ-xW-b4r" id="KiT-ee-Th3"/>
                         <outlet property="timeLabel" destination="Dmn-xp-0Yy" id="89x-hS-WAI"/>
+                        <outlet property="whiteMask" destination="Qia-YL-RvV" id="emn-6f-iGy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138" y="87"/>
         </scene>
     </scenes>
 </document>

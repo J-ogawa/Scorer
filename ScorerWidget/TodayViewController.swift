@@ -10,47 +10,64 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-    let categories = [
-    Category.create(name: "睡眠", color: .cyan),
-    Category.create(name: "勉強", color: .purple),
-    Category.create(name: "仕事", color: .orange),
+    let categories: [[String:Any]] = [
+        ["id" : 1, "name" : "睡眠", "color" : UIColor.cyan],
+        ["id" : 2, "name" : "勉強", "color" : UIColor.purple],
+        ["id" : 3, "name" : "仕事", "color" : UIColor.orange],
     ]
     var modified = false;
-    var current = Spending.all().last ?? Spending.create(score: 4, category_id: 1, started_at: Date())
+    var current = ["score" : 4, "category_id" : 1, "started_at" : Date()] as [String : Any]
+//    var current = Spending.all().last ?? Spending.create(score: 4, category_id: 1, started_at: Date())
 //    var currentCategory =
     let formatter = DateComponentsFormatter()
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var blackMask: UIView!
+    @IBOutlet weak var whiteMask: UIView!
     
     @IBAction func switchCategory(_ sender: Any) {
-        current = Spending.create(score: current.score, category_id: (current.category_id + 1) % 3, started_at: Date())
+        current = [
+            "score" : current["score"]!,
+            "category_id" : ((current["category_id"] as! Int + 1) % 3) + 1,
+            "started_at" : Date()
+            ]
         print("\(current)")
         updateLabels()
     }
     
     @IBAction func plus(_ sender: Any) {
-        current = Spending.create(score: ([current.score + 1, 5].min()!), category_id: current.category_id, started_at: Date())
+        current = [
+            "score" : [current["score"] as! Int + 1, 5].min()!,
+            "category_id" : current["category_id"]!,
+            "started_at" : Date()
+        ]
         print("\(current)")
         updateLabels()
     }
     
     @IBAction func minus(_ sender: Any) {
-        current = Spending.create(score: ([current.score - 1, 1].max()!), category_id: current.category_id, started_at: Date())
+        current = [
+            "score" : [current["score"] as! Int - 1, 1].max()!,
+            "category_id" : current["category_id"]!,
+            "started_at" : Date()
+        ]
         print("\(current)")
         updateLabels()
     }
     
-    func currentCategory() -> Category {
-        return Category.find(id: current.category_id) ?? categories[current.category_id]
+    func currentCategory() -> [String:Any] {
+        return categories.filter { $0["id"] as! Int == current["category_id"] as! Int }.first!
     }
     
     func updateLabels() {
-        self.view.backgroundColor = currentCategory().color
-        scoreLabel.text = "\(current.score)"
-        categoryLabel.text = currentCategory().name
-        timeLabel.text = formatter.string(from: Date().timeIntervalSince(current.started_at))
+        self.view.backgroundColor = (currentCategory()["color"] as! UIColor)
+        blackMask.alpha = CGFloat(4 - (current["score"] as! Int)) * 0.1
+        whiteMask.alpha = CGFloat(-4 + (current["score"] as! Int)) * 0.1
+        scoreLabel.text = "\(current["score"]!)"
+        categoryLabel.text = currentCategory()["name"] as? String
+        timeLabel.text = formatter.string(from: Date().timeIntervalSince(current["started_at"] as! Date))
     }
     
     override func viewDidLoad() {
